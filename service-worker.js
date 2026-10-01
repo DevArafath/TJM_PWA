@@ -1,4 +1,4 @@
-const CACHE_NAME = "tjm-pwa-v1";const CACHE_NAME = "tjm-pwa-v2";
+const CACHE_NAME = "tjm-pwa-v3";
 
 const FILES_TO_CACHE = [
     "./",
