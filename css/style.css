@@ -1,0 +1,530 @@
+/* =========================================================
+   THAQWA JUMMAH MASJID
+   Main Stylesheet
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+    --primary: #0f5132;
+    --primary-dark: #083c25;
+    --primary-light: #e8f3ed;
+
+    --gold: #c8a951;
+    --gold-light: #f7f0d8;
+
+    --white: #ffffff;
+    --background: #f8faf9;
+    --text: #1d2923;
+    --muted: #66736c;
+    --border: #dfe8e3;
+
+    --shadow: 0 10px 35px rgba(15, 81, 50, 0.08);
+
+    --radius: 18px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+
+.header-content {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.brand-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+
+.brand-subtitle {
+    color: var(--muted);
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(200, 169, 81, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            var(--background) 100%
+        );
+
+    padding: 80px 0;
+}
+
+
+.hero-content {
+    text-align: center;
+    max-width: 760px;
+}
+
+
+.hero-logo-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--white);
+
+    border-radius: 50%;
+
+    padding: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 81, 50, 0.12),
+        0 0 0 8px rgba(200, 169, 81, 0.08);
+}
+
+
+.hero-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.welcome-text {
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.3rem, 7vw, 4.5rem);
+    line-height: 1.15;
+    color: var(--primary);
+}
+
+
+.divider {
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    margin: 24px auto;
+    border-radius: 10px;
+}
+
+
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+
+.hero-buttons {
+    margin-top: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 22px;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+
+    box-shadow: 0 8px 20px rgba(15, 81, 50, 0.2);
+}
+
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+
+.btn-outline {
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+
+.btn-outline:hover {
+    background: var(--primary-light);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+    padding: 90px 0;
+    background: var(--white);
+}
+
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.section-label {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 8px;
+}
+
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--primary);
+    font-size: 2.2rem;
+}
+
+
+.about-card {
+    max-width: 820px;
+    margin: 0 auto;
+
+    padding: 36px;
+
+    background: var(--background);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+.about-card p {
+    color: var(--muted);
+}
+
+
+.about-card p + p {
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.values-section {
+    padding: 80px 0;
+}
+
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.value-card {
+    background: var(--white);
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+
+.value-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+
+.value-card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+
+.value-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--primary-dark);
+    color: rgba(255, 255, 255, 0.75);
+
+    text-align: center;
+
+    padding: 50px 0 30px;
+}
+
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+
+    margin: 0 auto 12px;
+}
+
+
+.footer-name {
+    color: var(--white);
+    font-weight: 700;
+}
+
+
+.footer-text {
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+
+.copyright {
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(100% - 28px, 1120px);
+    }
+
+
+    .hero {
+        padding: 60px 0;
+    }
+
+
+    .hero-logo-wrapper {
+        width: 125px;
+        height: 125px;
+    }
+
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-card {
+        padding: 25px;
+    }
+
+
+    .brand-subtitle {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+}
+
