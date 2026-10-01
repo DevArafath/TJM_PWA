@@ -79,6 +79,56 @@ a {
     margin: 0 auto;
 }
 
+/* =====================================================
+   CUSTOM APP SPLASH SCREEN
+===================================================== */
+
+.app-splash {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #0f5132;
+    color: #ffffff;
+
+    text-align: center;
+
+    transition: opacity 0.5s ease,
+                visibility 0.5s ease;
+}
+
+.splash-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+
+    margin-bottom: 25px;
+}
+
+.app-splash h1 {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+.app-splash p {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+
+/* Hide splash */
+
+.app-splash.hide {
+    opacity: 0;
+    visibility: hidden;
+}
 
 /* =========================================================
    HEADER

@@ -140,3 +140,24 @@ if ("serviceWorker" in navigator) {
     });
 
 }
+
+/* =====================================================
+   CUSTOM SPLASH SCREEN
+   Keep splash visible for 5 seconds
+===================================================== */
+
+window.addEventListener("load", function () {
+
+    const splash = document.getElementById("appSplash");
+
+    if (splash) {
+
+        setTimeout(function () {
+
+            splash.classList.add("hide");
+
+        }, 5000);
+
+    }
+
+});
